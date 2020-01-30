@@ -12,9 +12,7 @@ public class ConfigController {
     private static final int OK = 200;
 
     public static void start() {
-
         ConfigSingleton config = ConfigSingleton.getInstance();
-
 
         Spark.get("/config", (req, res) -> {
             res.status(OK);
