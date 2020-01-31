@@ -20,6 +20,7 @@ public class Main {
     }
 
     private static void startServices() {
+        Spark.port(418);
         ConfigController.start();
         ProductController.start();
         ShutdownController.start();
