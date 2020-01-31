@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 public class CoffeeReportingService {
     private static final Logger LOGGER = Logger.getLogger(ConfigSingleton.class.getName());
 
-    private static void sendData(List<String> products) {
+    public static void sendData(List<String> products) {
 
         ConfigSingleton config = ConfigSingleton.getInstance();
         JSONObject status = new JSONObject();
