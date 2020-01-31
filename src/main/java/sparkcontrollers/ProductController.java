@@ -11,6 +11,10 @@ public class ProductController {
 
     private static List<String> products = new ArrayList<>();
 
+    public static List<String> getProducts() {
+        return products;
+    }
+
     public static void start() {
         ConfigSingleton config = ConfigSingleton.getInstance();
         config.loadProperties();

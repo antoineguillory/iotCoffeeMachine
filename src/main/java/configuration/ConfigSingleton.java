@@ -52,6 +52,10 @@ public class ConfigSingleton {
         this.serverPort = serverPort;
     }
 
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
+
 
     public int getFrequency() {
         checkIfPropertyFileLoaded();

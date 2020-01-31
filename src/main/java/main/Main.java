@@ -1,6 +1,7 @@
 package main;
 
 import configuration.ConfigSingleton;
+import services.TimingService;
 import sparkcontrollers.ConfigController;
 import sparkcontrollers.ProductController;
 import sparkcontrollers.ShutdownController;
@@ -22,5 +23,7 @@ public class Main {
         ProductController.start();
         ShutdownController.start();
         VersionController.start();
+
+        TimingService.startAgent();
     }
 }
