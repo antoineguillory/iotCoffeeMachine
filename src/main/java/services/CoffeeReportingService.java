@@ -8,10 +8,10 @@ import kong.unirest.json.JSONObject;
 import java.util.List;
 import java.util.logging.Logger;
 
-public class CoffeeReportingService {
+class CoffeeReportingService {
     private static final Logger LOGGER = Logger.getLogger(ConfigSingleton.class.getName());
 
-    public static void sendData(List<String> products) {
+    static void sendData(List<String> products) {
 
         ConfigSingleton config = ConfigSingleton.getInstance();
         JSONObject status = new JSONObject();
@@ -20,7 +20,7 @@ public class CoffeeReportingService {
         JSONObject j = new JSONObject();
 
         for(String prod : products) {
-            j.put(prod, 1); // TODO GESTION DES STOCKS
+            j.put(prod, 1);
         }
         status.put("products", productsMap);
         status.put("port", config.getAgentPort());

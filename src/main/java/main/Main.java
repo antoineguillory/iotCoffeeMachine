@@ -2,6 +2,7 @@ package main;
 
 import configuration.ConfigSingleton;
 import services.TimingService;
+import spark.Spark;
 import sparkcontrollers.ConfigController;
 import sparkcontrollers.ProductController;
 import sparkcontrollers.ShutdownController;
