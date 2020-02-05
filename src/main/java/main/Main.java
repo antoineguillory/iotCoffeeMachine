@@ -17,10 +17,10 @@ public class Main {
     private static void loadConfig(){
         ConfigSingleton config = ConfigSingleton.getInstance();
         config.loadProperties();
+        Spark.port(config.getAgentPort());
     }
 
     private static void startServices() {
-        Spark.port(418);
         ConfigController.start();
         ProductController.start();
         ShutdownController.start();
